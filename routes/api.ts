@@ -7,25 +7,28 @@ const storage = cshStorage();
 
 router.post("/share", async (req, res, next) => {
     const token = req.cookies.ShrToken || randomBytes(32).toString("base64");
+    const id = req.body.id || "";
     
     try {
-        let data = await storage.get(req.body.id);
+        let data = await storage.get(id);
 
         if (data && data.token === token) {
             if (data.bigId !== req.body.bigId) {
-                await storage.del(req.body.id);
+                await storage.del(id);
                 data = await storage.add({ ...req.body, token: token });
             }
             else {
                 data = await storage.edit(req.body) || await storage.add(req.body);
             }
         }
-        
-        if (!data) {
+        else if (!data) {
+            data = await storage.add(req.body);
+        }
+        else {
             res.sendStatus(400);
             return;
         }
-
+        
         res.cookie("ShrToken", token).json({ id: data.id });
     } catch {
         res.sendStatus(500);
