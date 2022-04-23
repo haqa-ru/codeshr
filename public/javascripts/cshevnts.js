@@ -1,7 +1,7 @@
 window.addEventListener("load", async () => {
+    themeCheckboxOnClick();
     await fetchContent()
     await languageSelectorOnChange();
-    themeCheckboxOnClick();
 });
 
 window.onpopstate = (e) => {

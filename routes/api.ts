@@ -6,7 +6,7 @@ const router = express.Router();
 const storage = cshStorage();
 
 router.post("/share", async (req, res, next) => {
-    const token = req.cookies.ShrToken || randomBytes(32).toString("base64");
+    const token = req.cookies["ShrToken"] || randomBytes(32).toString("base64");
     const id = req.body.id || "";
     
     try {
@@ -18,11 +18,11 @@ router.post("/share", async (req, res, next) => {
                 data = await storage.add({ ...req.body, token: token });
             }
             else {
-                data = await storage.edit(req.body) || await storage.add(req.body);
+                data = await storage.edit({ ...req.body, token: token }) || await storage.add({ ...req.body, token: token });
             }
         }
         else if (!data) {
-            data = await storage.add(req.body);
+            data = await storage.add({ ...req.body, token: token });
         }
         else {
             res.sendStatus(400);
