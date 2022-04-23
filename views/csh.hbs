@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Codeshr</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="/stylesheets/static-csh.css">
+    <link rel="stylesheet" href="/stylesheets/static-csh.css" id="themecssfile">
+    <link rel="stylesheet" href="/codemirror-5.65.2/theme/darcula.css">
+    <link rel="stylesheet" href="/codemirror-5.65.2/lib/codemirror.css">
+
+    <script src="/codemirror-5.65.2/lib/codemirror.js"></script>
+    <script src="/codemirror-5.65.2/addon/edit/matchbrackets.js"></script>
+    <script src="/codemirror-5.65.2/addon/selection/active-line.js"></script>
+
+</head>
+
+<body>
+    <script> let id = "{{id}}";</script>
+
+    <div class="Editor">
+        <textarea id="editorworkspace"></textarea>
+    </div>
+    <div class="Toolbar">
+        <p id="cursorposition"></p>
+        <label class="IdTypeSwitch">
+            <input type="checkbox" id="idtypecheckbox" onclick="idTypeCheckboxOnClick()">
+            <span class="IdTypeSlider"></span>
+        </label>
+        <label class="IdLabel">
+            <i id="linktoresource" onclick="linkToResourceOnClick()">none</i>
+        </label>
+        <label class="ThemeSwitch">
+            <input type="checkbox" id="themecheckbox" onclick="themeCheckboxOnClick()" checked>
+            <span class="ThemeSlider"></span>
+        </label>
+        <select id="languageselector" onchange="languageSelectorOnChange()">
+            <option value="text" selected>Plain text</option>
+            <option value="text/x-csrc" script="/codemirror-5.65.2/mode/clike/clike.js">C</option>
+            <option value="text/x-c++src" script="/codemirror-5.65.2/mode/clike/clike.js">C++</option>
+            <option value="text/x-csharp" script="/codemirror-5.65.2/mode/clike/clike.js">C#</option>
+            <option value="javascript" script="/codemirror-5.65.2/mode/javascript/javascript.js">Javascript</option>
+            <option value="python" script="/codemirror-5.65.2/mode/python/python.js">Python</option>
+        </select>
+    </div>
+
+    <script src="/javascripts/cshmisc.js"></script>
+    <script src="/javascripts/cshmain.js"></script>
+    <script src="/javascripts/cshevnts.js"></script>
+</body>
+</html>

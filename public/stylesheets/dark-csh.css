@@ -1,0 +1,70 @@
+.CodeMirror-linenumbers {
+    background-color: #444;
+}
+
+.CodeMirror-scroll {
+    background-color: #222;
+}
+
+.CodeMirror-activeline-background {
+    background: #444 !important;
+}
+
+.Toolbar {
+    background-color: #444;
+}
+
+.ThemeSlider {
+    background-color: #333;
+}  
+
+.ThemeSlider:before {
+    background-color: white;
+}
+
+input:checked + .ThemeSlider {
+    background-color: white;
+}
+  
+input:checked + .ThemeSlider:before {
+    background-color: #333;
+}
+
+.IdTypeSlider {
+    background-color: #333;
+}  
+
+.IdTypeSlider:before {
+    background-color: white;
+}
+
+input:checked + .IdTypeSlider {
+    background-color: white;
+}
+  
+input:checked + .IdTypeSlider:before {
+    background-color: #333;
+    color: white;
+}
+
+.IdLabel {
+    background-color: #333;
+}
+
+#cursorposition {
+    color: white;
+}
+
+#linktoresource {
+    color: white;
+}
+
+#linktoresource:hover {
+    color: #AAA;
+}
+
+#languageselector {
+    border-color: white;
+    background-color: #444;
+    color: white;
+}
