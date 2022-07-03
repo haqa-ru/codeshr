@@ -29,7 +29,7 @@ namespace Codeshr.Controllers
         {
             try
             {
-                string data = System.IO.File.ReadAllText(Path.Combine(_private, id));
+                var data = JsonSerializer.Deserialize<ShareableEditorModel>(System.IO.File.ReadAllText(Path.Combine(_private, id)));
 
                 return Ok(data);
             }

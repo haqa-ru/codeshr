@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useDelayedEffect } from "./useDelayedEffect";
 import { useUpdateEffect } from "./useUpdateEffect";
 
@@ -25,7 +25,7 @@ export function useShared(
         id: id,
         code: "",
         lang: "plaintext",
-        secure: false,
+        secure: id ? id.length > 4 : false,
     });
 
     const [status, setStatus] = useState<status>("WAIT");
@@ -43,8 +43,11 @@ export function useShared(
     };
 
     useEffect(() => {
+        setStatus("WAIT");
+    }, [shared.code, shared.lang, shared.secure]);
+
+    useEffect(() => {
         const fetchInitialData = async (id: string) => {
-            setStatus("WAIT");
             const res = await fetch(`/api/share/${id}`, {
                 headers: {
                     "Content-Type": "application/json",
@@ -53,6 +56,7 @@ export function useShared(
 
             if (res.ok) {
                 updateShared(await res.json());
+                setStatus("OK");
             } else if (res.status === 500) {
                 setStatus("BAD");
             } else {
@@ -86,38 +90,33 @@ export function useShared(
                 }
             };
 
+            const commitInitialData = async (body: {
+                code: string;
+                lang: string;
+                secure: boolean;
+            }) => {
+                const res = await fetch("/api/share", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(body),
+                });
+
+                if (res.ok) {
+                    updateShared({ id: (await res.json()).id });
+                    setStatus("OK");
+                } else {
+                    setStatus("BAD");
+                }
+            };
+
             if (shared.id) commitData({ ...shared, id: shared.id });
+            else commitInitialData(shared);
         },
-        500,
-        [shared.code, shared.lang]
+        300,
+        [shared.code, shared.lang, shared.id]
     );
-
-    useUpdateEffect(() => {
-        const commitInitialData = async (body: {
-            code: string;
-            lang: string;
-            secure: boolean;
-        }) => {
-            const res = await fetch("/api/share", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(body),
-            });
-
-            if (res.ok) {
-                updateShared({ id: (await res.json()).id });
-                setStatus("OK");
-            } else {
-                setStatus("BAD");
-            }
-        };
-
-        setStatus("WAIT");
-
-        if (!shared.id) commitInitialData(shared);
-    }, [shared.code]);
 
     useUpdateEffect(() => {
         const secureData = async (body: {
@@ -125,7 +124,6 @@ export function useShared(
             lang: string;
             secure: boolean;
         }) => {
-            setStatus("WAIT");
             await fetch(`/api/share/${shared.id}`, {
                 method: "DELETE",
                 headers: {
@@ -134,21 +132,6 @@ export function useShared(
             });
 
             updateShared({ id: null });
-
-            const res = await fetch("/api/share", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(body),
-            });
-
-            if (res.ok) {
-                updateShared({ id: (await res.json()).id });
-                setStatus("OK");
-            } else {
-                setStatus("BAD");
-            }
         };
 
         secureData(shared);

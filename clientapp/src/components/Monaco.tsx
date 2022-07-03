@@ -16,6 +16,7 @@ function Monaco() {
                 }}
                 theme={local.theme}
                 language={shared.lang}
+                value={shared.code}
             ></Editor>
         </div>
     );
