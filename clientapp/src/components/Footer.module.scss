@@ -1,0 +1,258 @@
+.Footer {
+    background-color: #2e2e2e;
+    width: 99%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    height: 35px;
+    position: fixed;
+    bottom: 5px;
+    border-radius: 8px;
+    min-width: 330px;
+    transition: 400ms;
+}
+
+.Config {
+    display: flex;
+    position: fixed;
+    right: 0;
+    height: inherit 100%;
+    justify-content: center;
+    align-items: center;
+
+    .Copy {
+        color: white;
+        font-size: 25px;
+        font-weight: bolder;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+            margin-right: 10px;
+            border-radius: 8px;
+
+            &:hover {
+                transition: 400ms;
+                color: #b2b2b2;
+                cursor: pointer;
+            }
+        }
+    }
+
+    select {
+        width: 100px;
+        height: 25px;
+        margin: 5px;
+        margin-right: 15px;
+        border-radius: 8px;
+        background-color: #2e2e2e;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+.Id {
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    padding-right: 15px;
+
+    &:hover {
+        transition: 300ms;
+        color: #b2b2b2;
+        cursor: pointer;
+    }
+}
+
+.Theme {
+    margin-right: 10px;
+
+    .Switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 25px;
+        margin: 0;
+        vertical-align: top;
+        background: #ffffff;
+        border: 1px solid #bbc1e1;
+        border-radius: 8px;
+        outline: none;
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        &::after {
+            content: "";
+
+            display: inline-block;
+            position: absolute;
+            left: 1.5px;
+            top: 1px;
+
+            width: 21px;
+            height: 21px;
+            background-color: #2e2e2e;
+            border-radius: 8px;
+
+            transform: translateX(0);
+            transition: 300ms;
+        }
+
+        &:checked::after {
+            transform: translateX(calc(100% + 3px));
+            background-color: #ffffff;
+            width: 19px;
+            height: 19px;
+            top: 2px;
+            left: 5px;
+        }
+        &:checked {
+            background-color: #2e2e2e;
+        }
+    }
+}
+
+.Meta {
+    display: flex;
+    position: fixed;
+    left: 0;
+    height: inherit 100%;
+    justify-content: center;
+    align-items: center;
+
+    .Status {
+        height: 35px;
+        width: 35px;
+        font-size: 25px;
+        border-bottom-right-radius: 8px;
+        border-top-right-radius: 8px;
+        font-weight: bold;
+        text-align: center;
+        margin-right: 15px;
+        color: black;
+
+        .OK {
+            height: 100%;
+            background-color: #2ecc40;
+            border-radius: 8px;
+        }
+
+        .WAIT {
+            height: 100%;
+            background-color: #ffdc00;
+            border-radius: 8px;
+        }
+
+        .BAD {
+            height: 100%;
+            background-color: #ff4136;
+            border-radius: 8px;
+        }
+
+        .INIT {
+            height: 100%;
+            background-color: #ffffff;
+            border-radius: 8px;
+        }
+
+        .DENY {
+            height: 100%;
+            background-color: #0074d9;
+            border-radius: 8px;
+        }
+    }
+}
+
+.Tools {
+    color: white;
+    font-size: 24px;
+
+    .New {
+        &:hover {
+            transition: 400ms;
+            color: #b2b2b2;
+            cursor: pointer;
+        }
+    }
+
+    .Fork {
+        margin-left: 15px;
+
+        &:hover {
+            transition: 400ms;
+            color: #b2b2b2;
+            cursor: pointer;
+        }
+    }
+
+    .Key {
+        margin-left: 15px;
+
+        &:hover {
+            transition: 400ms;
+            color: #b2b2b2;
+            cursor: pointer;
+        }
+    }
+
+    .Settings {
+        margin-left: 15px;
+
+        &:hover {
+            transition: 400ms;
+            color: #b2b2b2;
+            cursor: pointer;
+        }
+    }
+}
+
+.Lang {
+    height: inherit 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+
+    .Compile {
+        color: white;
+        align-items: center;
+        text-align: center;
+        font-size: 20px;
+        margin-right: 15px;
+        padding-bottom: 3px;
+
+        &:hover {
+            transition: 400ms;
+            color: #b2b2b2;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Footer {
+        height: 105px;
+    }
+
+    .Config {
+        bottom: 0px;
+        right: 0px;
+        left: 0px;
+    }
+
+    .Config .Theme {
+        margin: 0;
+    }
+
+    .Meta {
+        height: 70px;
+        flex-direction: column;
+        width: 100%;
+    }
+}
