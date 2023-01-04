@@ -1,0 +1,26 @@
+name: Server CI workflow
+
+on:
+  push:
+    branches:
+      - "master"
+    tags:
+      - "*"
+    paths:
+      - "Server/**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Login to docker registry
+        run: echo '${{ secrets.DOCKER_ACCESS_KEY }}' | docker login --username json_key --password-stdin cr.yandex
+
+      - name: Build the Docker image
+        working-directory: ./Server
+        run: docker build . --file Dockerfile --tag ${{ secrets.DOCKER_REGISTRY_ID }}/codeshr:${{github.ref_name}} --tag ${{ secrets.DOCKER_REGISTRY_ID }}/codeshr:latest
+
+      - name: Push to the registry
+        run: docker push ${{ secrets.DOCKER_REGISTRY_ID }}/codeshr --all-tags
