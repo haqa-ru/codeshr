@@ -38,4 +38,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ru-central1
           AWS_S3_ENDPOINT: https://storage.yandexcloud.net
-          SOURCE_DIR: ./client
+          SOURCE_DIR: ./client/build/

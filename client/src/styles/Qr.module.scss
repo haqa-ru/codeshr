@@ -1,0 +1,14 @@
+.Qr {
+  background-color: #1e1e1e;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .Container {
+    border-radius: 20px;
+    background-color: white;
+    width: fit-content;
+    padding: 20px;
+  }
+}

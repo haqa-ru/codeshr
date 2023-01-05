@@ -1,0 +1,36 @@
+$themes: (
+  light: (
+    color: #000,
+    color2: #1e1e1e,
+    background: #fffffe,
+    background2: #dddddd,
+    secondary: #0074d9,
+  ),
+  dark: (
+    color: #fffffe,
+    color2: #dddddd,
+    background: #000,
+    background2: #1e1e1e,
+    secondary: #39bbbb,
+  ),
+);
+
+.Green {
+  color: #242424;
+  background-color: #2ecc40;
+}
+
+.Red {
+  color: #242424;
+  background-color: #ff4136;
+}
+
+.Yellow {
+  color: #242424;
+  background-color: #ffdc00;
+}
+
+.Navy {
+  color: #242424;
+  background-color: #0074d9;
+}
