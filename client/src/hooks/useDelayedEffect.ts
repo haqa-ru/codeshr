@@ -7,8 +7,6 @@ export function useDelayedEffect(
 ) {
   const timerRef = useRef<number | null>(null);
   const didMountRef = useRef(false);
-  const fnRef = useRef(fn);
-  const delayRef = useRef(delay);
 
   useEffect(() => {
     if (timerRef.current) {
@@ -16,7 +14,7 @@ export function useDelayedEffect(
     }
 
     if (didMountRef.current) {
-      timerRef.current = window.setTimeout(fnRef.current, delayRef.current);
+      timerRef.current = window.setTimeout(fn, delay);
     }
 
     didMountRef.current = true;

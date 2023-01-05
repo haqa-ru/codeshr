@@ -112,7 +112,7 @@ public class ShareController : ControllerBase {
 
             await _client.PutObjectAsync(new PutObjectRequest {
                 BucketName = _bucketName,
-                Key = $"private/{body.Id}",
+                Key = body.Id,
                 InputStream = stream,
                 ContentType = "application/json"
             });

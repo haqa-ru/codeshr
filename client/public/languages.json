@@ -1,0 +1,354 @@
+[
+  {
+    "name": "abap",
+    "value": "abap"
+  },
+  {
+    "name": "aes",
+    "value": "aes"
+  },
+  {
+    "name": "apex",
+    "value": "apex"
+  },
+  {
+    "name": "azcli",
+    "value": "azcli"
+  },
+  {
+    "name": "bat",
+    "value": "bat"
+  },
+  {
+    "name": "bicep",
+    "value": "bicep"
+  },
+  {
+    "name": "c",
+    "value": "c"
+  },
+  {
+    "name": "cameligo",
+    "value": "cameligo"
+  },
+  {
+    "name": "clojure",
+    "value": "clojure"
+  },
+  {
+    "name": "coffeescript",
+    "value": "coffeescript"
+  },
+  {
+    "name": "cpp",
+    "value": "cpp"
+  },
+  {
+    "name": "C#",
+    "value": "csharp"
+  },
+  {
+    "name": "csp",
+    "value": "csp"
+  },
+  {
+    "name": "cssw",
+    "value": "cssw"
+  },
+  {
+    "name": "cypher",
+    "value": "cypher"
+  },
+  {
+    "name": "dart",
+    "value": "dart"
+  },
+  {
+    "name": "dockerfile",
+    "value": "dockerfile"
+  },
+  {
+    "name": "ecl",
+    "value": "ecl"
+  },
+  {
+    "name": "elixir",
+    "value": "elixir"
+  },
+  {
+    "name": "flow9",
+    "value": "flow9"
+  },
+  {
+    "name": "freemarker2",
+    "value": "freemarker2"
+  },
+  {
+    "name": "freemarker2.tag-angle.interpolation-bracket",
+    "value": "freemarker2.tag-angle.interpolation-bracket"
+  },
+  {
+    "name": "freemarker2.tag-angle.interpolation-dollar",
+    "value": "freemarker2.tag-angle.interpolation-dollar"
+  },
+  {
+    "name": "freemarker2.tag-auto.interpolation-bracket",
+    "value": "freemarker2.tag-auto.interpolation-bracket"
+  },
+  {
+    "name": "freemarker2.tag-auto.interpolation-dollar",
+    "value": "freemarker2.tag-auto.interpolation-dollar"
+  },
+  {
+    "name": "freemarker2.tag-bracket.interpolation-bracket",
+    "value": "freemarker2.tag-bracket.interpolation-bracket"
+  },
+  {
+    "name": "freemarker2.tag-bracket.interpolation-dollar",
+    "value": "freemarker2.tag-bracket.interpolation-dollar"
+  },
+  {
+    "name": "fsharp",
+    "value": "fsharp"
+  },
+  {
+    "name": "go",
+    "value": "go"
+  },
+  {
+    "name": "graphql",
+    "value": "graphql"
+  },
+  {
+    "name": "handlebars",
+    "value": "handlebars"
+  },
+  {
+    "name": "hcl",
+    "value": "hcl"
+  },
+  {
+    "name": "html",
+    "value": "html"
+  },
+  {
+    "name": "ini",
+    "value": "ini"
+  },
+  {
+    "name": "java",
+    "value": "java"
+  },
+  {
+    "name": "javascript",
+    "value": "javascript"
+  },
+  {
+    "name": "json",
+    "value": "json"
+  },
+  {
+    "name": "julia",
+    "value": "julia"
+  },
+  {
+    "name": "kotlin",
+    "value": "kotlin"
+  },
+  {
+    "name": "less",
+    "value": "less"
+  },
+  {
+    "name": "lexon",
+    "value": "lexon"
+  },
+  {
+    "name": "liquid",
+    "value": "liquid"
+  },
+  {
+    "name": "lua",
+    "value": "lua"
+  },
+  {
+    "name": "m3",
+    "value": "m3"
+  },
+  {
+    "name": "markdown",
+    "value": "markdown"
+  },
+  {
+    "name": "mips",
+    "value": "mips"
+  },
+  {
+    "name": "msdax",
+    "value": "msdax"
+  },
+  {
+    "name": "mysql",
+    "value": "mysql"
+  },
+  {
+    "name": "objective-c",
+    "value": "objective-c"
+  },
+  {
+    "name": "pascal",
+    "value": "pascal"
+  },
+  {
+    "name": "pascaligo",
+    "value": "pascaligo"
+  },
+  {
+    "name": "perl",
+    "value": "perl"
+  },
+  {
+    "name": "pgsql",
+    "value": "pgsql"
+  },
+  {
+    "name": "php",
+    "value": "php"
+  },
+  {
+    "name": "pla",
+    "value": "pla"
+  },
+  {
+    "name": "plain text",
+    "value": "plaintext"
+  },
+  {
+    "name": "postiats",
+    "value": "postiats"
+  },
+  {
+    "name": "powerquery",
+    "value": "powerquery"
+  },
+  {
+    "name": "powershell",
+    "value": "powershell"
+  },
+  {
+    "name": "proto",
+    "value": "proto"
+  },
+  {
+    "name": "pug",
+    "value": "pug"
+  },
+  {
+    "name": "python",
+    "value": "python"
+  },
+  {
+    "name": "Q#",
+    "value": "qsharp"
+  },
+  {
+    "name": "r",
+    "value": "R"
+  },
+  {
+    "name": "razor",
+    "value": "razor"
+  },
+  {
+    "name": "redis",
+    "value": "redis"
+  },
+  {
+    "name": "redshift",
+    "value": "redshift"
+  },
+  {
+    "name": "restructuredtext",
+    "value": "restructuredtext"
+  },
+  {
+    "name": "ruby",
+    "value": "ruby"
+  },
+  {
+    "name": "rust",
+    "value": "rust"
+  },
+  {
+    "name": "sb",
+    "value": "sb"
+  },
+  {
+    "name": "scala",
+    "value": "scala"
+  },
+  {
+    "name": "scheme",
+    "value": "scheme"
+  },
+  {
+    "name": "scss",
+    "value": "scss"
+  },
+  {
+    "name": "shell",
+    "value": "shell"
+  },
+  {
+    "name": "sol",
+    "value": "sol"
+  },
+  {
+    "name": "sparql",
+    "value": "sparql"
+  },
+  {
+    "name": "SQL",
+    "value": "sql"
+  },
+  {
+    "name": "st",
+    "value": "st"
+  },
+  {
+    "name": "swift",
+    "value": "swift"
+  },
+  {
+    "name": "systemverilog",
+    "value": "systemverilog"
+  },
+  {
+    "name": "tcl",
+    "value": "tcl"
+  },
+  {
+    "name": "twig",
+    "value": "twig"
+  },
+  {
+    "name": "typescript",
+    "value": "typescript"
+  },
+  {
+    "name": "vb",
+    "value": "vb"
+  },
+  {
+    "name": "verilog",
+    "value": "verilog"
+  },
+  {
+    "name": "xml",
+    "value": "xml"
+  },
+  {
+    "name": "yaml",
+    "value": "yaml"
+  }
+]
