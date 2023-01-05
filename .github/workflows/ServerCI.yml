@@ -2,8 +2,6 @@ name: Server CI workflow
 
 on:
   push:
-    branches:
-      - "master"
     tags:
       - "*"
     paths:

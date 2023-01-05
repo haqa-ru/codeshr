@@ -2,8 +2,6 @@ name: Client CI workflow
 
 on:
   push:
-    branches:
-      - "Main"
     tags:
       - "*"
     paths:
